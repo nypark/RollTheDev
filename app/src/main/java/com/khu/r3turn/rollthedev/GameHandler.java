@@ -19,7 +19,6 @@ public class GameHandler {
     Activity thisActivity = null;
     TextView codeLineTextView = null;
     ImageView devImg = null;
-
     Developer developer = null;
 
 

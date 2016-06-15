@@ -6,7 +6,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
-
 /**
  * Created by yb on 2016-06-15.
  */
@@ -31,9 +30,7 @@ public class MenuHandler {
         menuEquButton = (Button) ctx.findViewById(R.id.button);
         menuDevButton = (Button) ctx.findViewById(R.id.button2);
         menuConButton = (Button) ctx.findViewById(R.id.button3);
-
         menuBackToMainButton = (ImageButton) ctx.findViewById(R.id.backToMainButton);
-
         menuEquButton.setOnClickListener(panelListener);
         menuDevButton.setOnClickListener(panelListener);
         menuConButton.setOnClickListener(panelListener);
