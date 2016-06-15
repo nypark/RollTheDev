@@ -6,6 +6,16 @@ package com.khu.r3turn.rollthedev;
 public class Consumable {
     int count;
     String name;
+    double price;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     int assistMultiplier;
     int developerMutliplier;
     public int getCount() {
