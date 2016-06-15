@@ -8,16 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.List;
 /**
  * Created by PNY on 2016-06-15.
  */
@@ -339,10 +337,10 @@ public class GameHandler {
         floatTextView.setVisibility(View.VISIBLE);
         Animation floatUpAnim;
         floatUpAnim = AnimationUtils.loadAnimation(thisActivity, R.anim.floatup);
+        floatTextView.startAnimation(floatUpAnim);
         floatUpAnim.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationEnd(Animation animation) {
-
             }
             @Override
             public void onAnimationStart(Animation animation) {
@@ -354,7 +352,6 @@ public class GameHandler {
             }
         });
         floatTextView.startAnimation(floatUpAnim);
-
     }
     public void updateDeveloperState() {
         double lps = 0;
