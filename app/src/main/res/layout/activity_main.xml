@@ -14,10 +14,63 @@
 
     </View>
 
-    <ListView android:id="@+id/DevList"
-        android:layout_width="400dp"
-        android:layout_height="320dp"
-        android:layout_below="@+id/DevScreen" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/DevScreen"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="3">
 
-    </ListView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="버튼1"
+                android:id="@+id/button"
+                android:background="@color/background_material_dark"
+                android:textColor="@color/abc_primary_text_material_dark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="버튼2"
+                android:id="@+id/button2"
+                android:background="@color/background_material_dark"
+                android:textColor="@color/abc_primary_text_disable_only_material_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="버튼3"
+                android:id="@+id/button3"
+                android:background="@color/background_material_dark"
+                android:textColor="@color/abc_primary_text_material_dark" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
