@@ -1,13 +1,14 @@
 package com.khu.r3turn.rollthedev;
 
-import android.content.res.TypedArray;
-import android.widget.Button;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.widget.RelativeLayout;
+
 /**
  * Created by yb on 2016-06-15.
  */
-public class PanelButton extends Button {
+public class PanelButton extends RelativeLayout {
     public PanelButton(Context context) {
         super(context);
     }

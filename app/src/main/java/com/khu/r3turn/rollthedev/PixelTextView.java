@@ -17,7 +17,7 @@ public class PixelTextView extends TextView{
     public PixelTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setTypeface(Typeface.createFromAsset(context.getAssets(), "fonts/victor-pixel.ttf"));
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.PixelTextView, 0, 0);
+        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.PixelTextView, 0, 0);
         a.recycle();
     }
 }
