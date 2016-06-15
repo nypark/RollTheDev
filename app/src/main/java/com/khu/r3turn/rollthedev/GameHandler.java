@@ -22,7 +22,6 @@ public class GameHandler {
     RelativeLayout devScreen = null;
     TextView codeLineTextView = null;
     ImageView devImg = null;
-
     Developer developer = null;
 
 

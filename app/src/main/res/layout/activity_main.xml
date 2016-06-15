@@ -57,6 +57,8 @@
             android:visibility="visible">
 
             <Button
+
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="버튼1"
@@ -106,56 +108,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <Button
+                    <com.khu.r3turn.rollthedev.PanelButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="버튼3"
                         android:background="@color/background_material_dark"
                         android:textColor="@color/abc_primary_text_material_dark"
                         />
-                    <Button
+                    <com.khu.r3turn.rollthedev.PanelButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="버튼3"
                         android:background="@color/background_material_dark"
                         android:textColor="@color/abc_primary_text_material_dark"
-                        /><Button
+                        />
+                    <com.khu.r3turn.rollthedev.PanelButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="버튼3"
                     android:background="@color/background_material_dark"
                     android:textColor="@color/abc_primary_text_material_dark"
-                    /><Button
+                    />
+                    <com.khu.r3turn.rollthedev.PanelButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="버튼3"
                     android:background="@color/background_material_dark"
                     android:textColor="@color/abc_primary_text_material_dark"
-                    /><Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="버튼3"
-                    android:background="@color/background_material_dark"
-                    android:textColor="@color/abc_primary_text_material_dark"
-                    /><Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="버튼3"
-                    android:background="@color/background_material_dark"
-                    android:textColor="@color/abc_primary_text_material_dark"
-                    /><Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="버튼3"
-                    android:background="@color/background_material_dark"
-                    android:textColor="@color/abc_primary_text_material_dark"
-                    /><Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="버튼3"
-                    android:background="@color/background_material_dark"
-                    android:textColor="@color/abc_primary_text_material_dark"
-                    /><Button
+                    />
+                    <com.khu.r3turn.rollthedev.PanelButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="버튼3"
@@ -168,13 +149,61 @@
                     android:background="@color/background_material_dark"
                     android:textColor="@color/abc_primary_text_material_dark"
                     />
-
-
-
-
-
-
-
+                    <com.khu.r3turn.rollthedev.PanelButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="버튼3"
+                    android:background="@color/background_material_dark"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    />
+                    <com.khu.r3turn.rollthedev.PanelButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="버튼3"
+                    android:background="@color/background_material_dark"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    />
+                    <com.khu.r3turn.rollthedev.PanelButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="버튼3"
+                        android:background="@color/background_material_dark"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        />
+                    <com.khu.r3turn.rollthedev.PanelButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="버튼3"
+                        android:background="@color/background_material_dark"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        />
+                    <com.khu.r3turn.rollthedev.PanelButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="버튼3"
+                        android:background="@color/background_material_dark"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        />
+                    <com.khu.r3turn.rollthedev.PanelButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="버튼3"
+                        android:background="@color/background_material_dark"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        /><Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="버튼3"
+                    android:background="@color/background_material_dark"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    />
+                    <com.khu.r3turn.rollthedev.PanelButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="버튼3"
+                        android:background="@color/background_material_dark"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        />
 
 
                 </LinearLayout>

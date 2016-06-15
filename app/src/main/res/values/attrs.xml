@@ -3,4 +3,6 @@
     <declare-styleable name="PixelTextView">
         <attr name="name" format="string"/>
     </declare-styleable>
+    <declare-styleable name="PanelButton">
+    </declare-styleable>
 </resources>
