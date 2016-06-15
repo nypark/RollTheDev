@@ -10,6 +10,7 @@ public class Developer {
 
     private static int DEVELOPER_IMG_SRC = 0;
 
+    private CodeLineThread codeLineThread = new CodeLineThread();
     private int imgFrame = 1;
     private ImageView devImg = null;
 

@@ -26,6 +26,7 @@ public class GameHandler {
         thisActivity = ctx;
 
         developer = new Developer( (RelativeLayout) ctx.findViewById(R.id.DevScreen));
+
         codeLineTextView = (TextView) ctx.findViewById(R.id.codeLineText);
         devImg = (ImageView) ctx.findViewById(R.id.DevImg);
 
