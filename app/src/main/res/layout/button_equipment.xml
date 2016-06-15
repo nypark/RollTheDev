@@ -13,7 +13,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <com.khu.r3turn.rollthedev.PanelButton
+            <RelativeLayout
+                android:id="@+id/e1"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:text="버튼3"
@@ -32,7 +33,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:textSize="25dp"
-                        android:text="apple keyboard"
+                        android:text="Just Keyboard"
                         android:textColor="@color/abc_primary_text_material_dark"
                         android:layout_toRightOf="@+id/e1_img"
                         />
@@ -48,7 +49,192 @@
                         android:layout_toRightOf="@+id/e1_img"
                         />
 
-            </com.khu.r3turn.rollthedev.PanelButton>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/e2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="버튼3"
+                android:background="@color/background_material_dark"
+                android:textColor="@color/abc_primary_text_material_dark" >
+                <ImageView
+                    android:id="@+id/e2_img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e2_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="25dp"
+                    android:text="Good keyboard"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_toRightOf="@+id/e2_img"
+                    />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e2_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="power good jjang"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_below="@+id/e2_title"
+                    android:layout_toRightOf="@+id/e2_img"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/e3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="버튼3"
+                android:background="@color/background_material_dark"
+                android:textColor="@color/abc_primary_text_material_dark" >
+                <ImageView
+                    android:id="@+id/e3_img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e3_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="25dp"
+                    android:text="Mechanical Keyboard"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_toRightOf="@+id/e3_img"
+                    />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e3_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="power good jjang"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_below="@+id/e3_title"
+                    android:layout_toRightOf="@+id/e3_img"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/e4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="버튼3"
+                android:background="@color/background_material_dark"
+                android:textColor="@color/abc_primary_text_material_dark" >
+                <ImageView
+                    android:id="@+id/e4_img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e4_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="25dp"
+                    android:text="CRT Monitor"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_toRightOf="@+id/e4_img"
+                    />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e4_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="power good jjang"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_below="@+id/e4_title"
+                    android:layout_toRightOf="@+id/e4_img"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/e5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="버튼3"
+                android:background="@color/background_material_dark"
+                android:textColor="@color/abc_primary_text_material_dark" >
+                <ImageView
+                    android:id="@+id/e5_img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e5_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="25dp"
+                    android:text="LCD Monitor"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_toRightOf="@+id/e5_img"
+                    />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e5_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="power good jjang"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_below="@+id/e5_title"
+                    android:layout_toRightOf="@+id/e5_img"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/e6"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="버튼3"
+                android:background="@color/background_material_dark"
+                android:textColor="@color/abc_primary_text_material_dark" >
+                <ImageView
+                    android:id="@+id/e6_img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e6_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="25dp"
+                    android:text="OLED MONITOR"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_toRightOf="@+id/e6_img"
+                    />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e6_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="power good jjang"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_below="@+id/e6_title"
+                    android:layout_toRightOf="@+id/e6_img"
+                    />
+
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 

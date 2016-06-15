@@ -35,7 +35,7 @@ public class Developer {
 
     public Developer(ViewGroup vg) {
         devImg = (ImageView) vg.findViewById(R.id.DevImg);
-        DEVELOPER_IMG_SRC = R.drawable.developer1;
+        DEVELOPER_IMG_SRC = R.drawable.developer1_1;
     }
 
     public void changeImgType () {
@@ -47,10 +47,10 @@ public class Developer {
     public void draw() {
         //frame 1
         if(imgFrame == 1)
-            DEVELOPER_IMG_SRC = R.drawable.developer1;
+            DEVELOPER_IMG_SRC = R.drawable.developer1_1;
         //frame 2
         else
-            DEVELOPER_IMG_SRC = R.drawable.developer2;
+            DEVELOPER_IMG_SRC = R.drawable.developer1_2;
 
         devImg.setImageResource(DEVELOPER_IMG_SRC);
     }

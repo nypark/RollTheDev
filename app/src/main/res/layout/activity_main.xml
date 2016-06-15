@@ -17,6 +17,7 @@
         android:layout_weight="0.50">
 
         <com.khu.r3turn.rollthedev.PixelTextView
+
             android:id="@+id/codeLineText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
-        android:visibility="gone">
+        android:visibility="visible">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -58,7 +59,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="버튼1"
+                android:text="Assist"
                 android:id="@+id/button"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_material_dark"
@@ -67,7 +68,7 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="버튼2"
+                android:text="Equipment"
                 android:id="@+id/button2"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_disable_only_material_dark"
@@ -76,7 +77,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="버튼3"
+                android:text="Consumable"
                 android:id="@+id/button3"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_material_dark"
@@ -84,11 +85,31 @@
 
         </LinearLayout>
     </LinearLayout>
+
+
     <RelativeLayout
-        android:id="@+id/scrollPanel"
+        android:id="@+id/scrollPanelAssist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
+        android:visibility="gone"
+        android:layout_weight="0.5" >
+
+
+        <ImageButton
+            android:id="@+id/backToMainButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scrollPanelEquip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
         android:layout_weight="0.5">
 
         <include
@@ -98,7 +119,7 @@
             layout="@layout/button_equipment"/>
 
         <ImageButton
-            android:id="@+id/backToMainButton"
+            android:id="@+id/backToMainButton2"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
@@ -106,6 +127,23 @@
             android:layout_marginBottom="10dp"
             android:layout_marginRight="10dp"
             />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/scrollPanelConsum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_weight="0.5" >
+
+        <ImageButton
+            android:id="@+id/backToMainButton3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp" />
     </RelativeLayout>
 
 </LinearLayout>

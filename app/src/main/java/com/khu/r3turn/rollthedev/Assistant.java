@@ -8,6 +8,15 @@ public class Assistant {
     String name;
     double linePerSecond;
     double price;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public int getCount() {
         return count;
     }
