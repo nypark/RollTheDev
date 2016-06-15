@@ -51,6 +51,7 @@ public class Consumable {
     }
 
     public Consumable(String name, int dm, int am , double price) {
+        this.count=0;
         this.name=name;
         this.developerMutliplier = dm;
         this.assistMultiplier=am;
