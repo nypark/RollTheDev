@@ -1,6 +1,7 @@
 package com.khu.r3turn.rollthedev;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
@@ -18,5 +19,7 @@ public class PixelTextView extends TextView{
     public PixelTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setTypeface(Typeface.createFromAsset(context.getAssets(), "fonts/victor-pixel.ttf"));
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.PixelTextView, 0, 0);
+        a.recycle();
     }
 }

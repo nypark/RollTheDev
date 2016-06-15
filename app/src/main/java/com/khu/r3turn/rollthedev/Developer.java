@@ -13,6 +13,8 @@ public class Developer {
     private int imgFrame = 1;
     private ImageView devImg = null;
 
+    public int codeLine = 0;
+
     public Developer(ViewGroup vg) {
         devImg = (ImageView) vg.findViewById(R.id.DevImg);
         DEVELOPER_IMG_SRC = R.drawable.developer1;
@@ -33,5 +35,15 @@ public class Developer {
             DEVELOPER_IMG_SRC = R.drawable.developer2;
 
         devImg.setImageResource(DEVELOPER_IMG_SRC);
+    }
+
+    public void addCodeLine() {
+        codeLine++;
+        changeImgType();
+        draw();
+    }
+
+    public int getCodeLine() {
+        return codeLine;
     }
 }
