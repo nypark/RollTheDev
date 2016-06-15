@@ -111,7 +111,6 @@ public class GameHandler {
         floatUpAnim.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationEnd(Animation animation) {
-<<<<<<< HEAD
                 if(floatTextList.size()>0) {
                     View temp = floatTextList.get(0);
                     temp.clearAnimation();
@@ -119,11 +118,7 @@ public class GameHandler {
                     floatTextList.remove(0);
                     Log.d("go away",floatTextList.size()+"");
                 }
-=======
-                floatTextView.setVisibility(View.GONE);
-                devScreen.removeView(floatTextView);
-                
->>>>>>> 59acf3d15bac36ab68fb75b63b26515cba238afa
+
             }
             @Override
             public void onAnimationStart(Animation animation) {
