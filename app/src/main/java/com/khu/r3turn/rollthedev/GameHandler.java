@@ -91,7 +91,7 @@ public class GameHandler {
                 return false;
             }
         });
-
+/*
         assistList.add(new Assistant("Newbie",5, 100));
         assistList.add(new Assistant("Intermediate",15, 1000));
         assistList.add(new Assistant("Experienced",50, 5000));
@@ -101,7 +101,7 @@ public class GameHandler {
 
         equipList.add(new Equipment("Keyboard", 5, 1 , 1000));
         equipList.add(new Equipment("Keyboard2",10, 2  , 50000));
-        equipList.add(new Equipment("Keyboard3",20, 5 , 25000.f));
+        equipList.add(new Equipment("Keyboard3",20, 5 , 25000));
         equipList.add(new Equipment("Monitor", 40,10 , 100000));
         equipList.add(new Equipment("Monitor2",80, 20 , 1000000));
         equipList.add(new Equipment("Monitor3", 160,40 , 6543210));
@@ -111,7 +111,28 @@ public class GameHandler {
         consumList.add(new Consumable("Monster", 4, 3 , 500000));
         consumList.add(new Consumable("Nightwork", 8, 4 ,1000000));
         consumList.add(new Consumable("Overwork", 16 , 5 ,2000000 ));
-        consumList.add(new Consumable("Zombie", 32 , 10 , 5000000 ));
+        consumList.add(new Consumable("Zombie", 32 , 10 , 5000000 ));*/
+
+        assistList.add(new Assistant("Newbie",0.5, 1));
+        assistList.add(new Assistant("Intermediate",1.5, 1));
+        assistList.add(new Assistant("Experienced",5, 1));
+        assistList.add(new Assistant("Advanced",10, 1));
+        assistList.add(new Assistant("Senior",20, 1));
+        assistList.add(new Assistant("Expert",50, 1));
+
+        equipList.add(new Equipment("Keyboard", 0.5, 1 , 1));
+        equipList.add(new Equipment("Keyboard2",1.0, 2  , 1));
+        equipList.add(new Equipment("Keyboard3",2.0, 4 , 1));
+        equipList.add(new Equipment("Monitor", 1.0,1.0 , 1));
+        equipList.add(new Equipment("Monitor2",2.0, 2.0 , 1));
+        equipList.add(new Equipment("Monitor3", 4.0,4.0 , 1));
+
+        consumList.add(new Consumable("Hot-Six", 1, 1 ,1));
+        consumList.add(new Consumable("RedBull", 2, 2 , 2));
+        consumList.add(new Consumable("Monster", 16, 16 , 5));
+        consumList.add(new Consumable("Nightwork", 1, 1 ,1));
+        consumList.add(new Consumable("Overwork", 4 , 4 ,2 ));
+        consumList.add(new Consumable("Zombie", 16 , 16 , 5 ));
 
         a[0]=(RelativeLayout)thisActivity.findViewById(R.id.a1);
         a[1]=(RelativeLayout)thisActivity.findViewById(R.id.a2);
@@ -203,7 +224,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Equipment t = equipList.get(0);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -213,7 +234,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Equipment t = equipList.get(1);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -223,7 +244,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Equipment t = equipList.get(2);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -233,7 +254,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Equipment t = equipList.get(3);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -243,7 +264,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Equipment t = equipList.get(4);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -253,7 +274,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Equipment t = equipList.get(5);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -264,7 +285,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(0);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -274,7 +295,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(1);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -285,7 +306,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(2);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -296,7 +317,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(3);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -307,7 +328,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(4);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -318,7 +339,7 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(5);
-                if(developer.getCodeLine()>=t.getCount()) {
+                if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
                 }
@@ -361,14 +382,16 @@ public class GameHandler {
 
         double lmp = 1;
         for(int i=0; i<equipList.size(); i++) {
-            lmp+=equipList.get(i).getLineMultiplier();
-            lps+=equipList.get(i).getLineAdder();
+            Equipment temp =  equipList.get(i);
+            lmp+=temp.getCount()*temp.getLineMultiplier();
+            lps+=temp.getCount()*temp.getLineAdder();
         }
         developer.setLinePerOneTenthSeconds(lps);
         double asm=1;
         for(int i=0; i<consumList.size(); i++) {
-            asm +=consumList.get(i).getAssistMultiplier();
-            lmp +=consumList.get(i).getDeveloperMutliplier();
+            Consumable temp = consumList.get(i);
+            asm +=temp.getCount()*temp.getAssistMultiplier();
+            lmp +=temp.getCount()*temp.getDeveloperMutliplier();
         }
         developer.setClickMultiplier(lmp);
     }
