@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity {
         //initialize
         init();
     }
+    protected void render() {
+        System.gc();
+
+    }
 
     //initialize properties
     public void init() {

@@ -1,9 +1,11 @@
 package com.khu.r3turn.rollthedev;
 
 import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -21,6 +23,7 @@ public class GameHandler {
     public static int TEXT_FLOAT_UP = 1;
     public static int TEXT_FLOAT_DOWN = 2;
     Activity thisActivity = null;
+    ViewGroup vg;
     RelativeLayout devScreen = null;
     TextView codeLineTextView = null;
     TextView codeLineTextView2 = null;
@@ -36,8 +39,10 @@ public class GameHandler {
     RelativeLayout e[];
 
     public GameHandler(Activity ctx) {
+
         thisActivity = ctx;
         devScreen = (RelativeLayout) ctx.findViewById(R.id.DevScreen);
+        vg = (ViewGroup)devScreen;
         developer = new Developer( (RelativeLayout)devScreen);
         assistList = new ArrayList<Assistant>();
         equipList = new ArrayList<Equipment>();
@@ -64,10 +69,12 @@ public class GameHandler {
                     public void run() {
                         codeLineTextView.setText("" + developer.getCodeLine());
                         codeLineTextView2.setText("" + developer.getLinePerOneTenthSeconds()*10+"lines per second");
+                        updateDeveloperState();
                     }
                 });
             }
         },100,100);
+
         //add onClickListener to increase code line number
         devImg.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -321,7 +328,8 @@ public class GameHandler {
 
     }
     public void showFloatingText(int floatType, int x, int y, String text) {
-        PixelTextView floatTextView = new PixelTextView(thisActivity, null);
+        System.gc();
+        PixelTextView floatTextView = new PixelTextView(vg.getContext(), null);
         floatTextView.setText(text);
         floatTextView.setX(x);
         floatTextView.setY(y);
@@ -348,18 +356,21 @@ public class GameHandler {
     public void updateDeveloperState() {
         double lps = 0;
         for(int i=0; i<assistList.size();i++) {
-          //  Assistant temp = assistList.get(i);
-           // lps+=temp.getCount()*temp.getLinePerSecond();
+            Assistant temp = assistList.get(i);
+            lps+=temp.getCount()*temp.getLinePerSecond();
         }
         developer.setLinePerOneTenthSeconds(lps);
         double lmp = 1;
         for(int i=0; i<equipList.size(); i++) {
-           // lmp+=equipList.get(i).getLineMultiplier();
+            lmp+=equipList.get(i).getLineMultiplier();
+        }
+
+        double asm=1;
+        for(int i=0; i<consumList.size(); i++) {
+            asm +=consumList.get(i).getAssistMultiplier();
+            lmp +=consumList.get(i).getDeveloperMutliplier();
         }
         developer.setClickMultiplier(lmp);
-        for(int i=0; i<consumList.size(); i++) {
-
-        }
     }
 
 }

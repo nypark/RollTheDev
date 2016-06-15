@@ -16,6 +16,15 @@ public class Developer {
     private double codeLine = 0;
     private double linePerOneTenthSeconds = 1.f;
     private double clickMultiplier = 1.f;
+    private double assistMultiplier =1.f;
+
+    public double getAssistMultiplier() {
+        return assistMultiplier;
+    }
+
+    public void setAssistMultiplier(double assistMultiplier) {
+        this.assistMultiplier = assistMultiplier;
+    }
 
     public double getLinePerOneTenthSeconds() {
         return linePerOneTenthSeconds;
