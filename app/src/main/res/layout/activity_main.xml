@@ -1,23 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
     tools:context="com.khu.r3turn.rollthedev.MainActivity">
 
-    <View android:id="@+id/DevScreen"
-        android:layout_width="400dp"
-        android:layout_height="300dp"
-        android:background="#FF0000"
-        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/DevScreen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.4"
+        android:layout_gravity="center_horizontal"
+        android:background="#FF0000">
 
-    </View>
+        <TextView
+            android:id="@+id/codeLineText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25dp"
+            android:text="@string/codeLine_default"
+            />
 
-    <ListView android:id="@+id/DevList"
-        android:layout_width="400dp"
-        android:layout_height="320dp"
+        <ImageView
+            android:id="@+id/DevImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/DevList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.6"
         android:layout_below="@+id/DevScreen" >
 
     </ListView>
-</RelativeLayout>
+</LinearLayout>
