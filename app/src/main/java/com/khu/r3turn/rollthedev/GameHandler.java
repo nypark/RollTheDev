@@ -53,7 +53,7 @@ public class GameHandler {
                                 Log.d("coord", x + ", " + y);
                                 developer.addCodeLine();
                                 codeLineTextView.setText("" + developer.getCodeLine());
-                                showFloatingText(TEXT_FLOAT_UP, (int) x, (int) y, "+1");
+                                showFloatingText(TEXT_FLOAT_UP, (int) x, (int) y, "+ 1");
                             } catch (Exception e) {e.printStackTrace();}
                         }
                     }.run();
@@ -78,6 +78,7 @@ public class GameHandler {
             public void onAnimationEnd(Animation animation) {
                 floatTextView.setVisibility(View.GONE);
                 devScreen.removeView(floatTextView);
+                
             }
 
             @Override
