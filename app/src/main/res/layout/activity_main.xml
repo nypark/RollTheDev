@@ -13,17 +13,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:background="#FF0000"
+        android:background="#FFFFFF"
         android:layout_weight="0.50">
 
-        <TextView
+        <com.khu.r3turn.rollthedev.PixelTextView
             android:id="@+id/codeLineText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
             android:textSize="25dp"
+            android:textStyle=""
             android:text="@string/codeLine_default"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/DevImg"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/codeLineText"
+            android:clickable="true"
             />
     </RelativeLayout>
 
