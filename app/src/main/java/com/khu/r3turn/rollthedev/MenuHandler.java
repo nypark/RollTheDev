@@ -28,6 +28,7 @@ public class MenuHandler {
         menuAssButton = (Button) ctx.findViewById(R.id.button);
         menuEquButton = (Button) ctx.findViewById(R.id.button2);
         menuConButton = (Button) ctx.findViewById(R.id.button3);
+
         menuBackToMainButton = (ImageButton) ctx.findViewById(R.id.backToMainButton);
         menuBackToMainButton2 = (ImageButton) ctx.findViewById(R.id.backToMainButton2);
         menuBackToMainButton3 = (ImageButton) ctx.findViewById(R.id.backToMainButton3);

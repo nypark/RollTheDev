@@ -5,6 +5,16 @@ package com.khu.r3turn.rollthedev;
  */
 public class Equipment {
     int count;
+    double price;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     String name;
     double lineAdder;
     double lineMultiplier;
