@@ -66,31 +66,37 @@
             android:layout_weight="0.50"
             android:visibility="visible">
 
-            <Button
+            <com.khu.r3turn.rollthedev.PixelTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Assist"
+                android:text="@string/btn_assist"
+                android:textSize="30dp"
                 android:id="@+id/button"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_material_dark"
+                android:gravity="center"
                 android:layout_weight="1" />
 
-            <Button
+            <com.khu.r3turn.rollthedev.PixelTextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="Equipment"
+                android:text="@string/btn_equip"
+                android:textSize="30dp"
                 android:id="@+id/button2"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_disable_only_material_dark"
+                android:gravity="center"
                 android:layout_weight="1" />
 
-            <Button
+            <com.khu.r3turn.rollthedev.PixelTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Consumable"
+                android:text="@string/btn_cons"
+                android:textSize="30dp"
                 android:id="@+id/button3"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_material_dark"
+                android:gravity="center"
                 android:layout_weight="1" />
 
         </LinearLayout>

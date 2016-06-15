@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">RollTheDev</string>
     <string name="codeLine_default">0</string>
+    <string name="btn_assist">Assist</string>
+    <string name="btn_equip">Equipment</string>
+    <string name="btn_cons">Consumable</string>
 </resources>

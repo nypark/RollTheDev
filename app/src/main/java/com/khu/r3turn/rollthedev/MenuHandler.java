@@ -2,10 +2,7 @@ package com.khu.r3turn.rollthedev;
 
 import android.app.Activity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.view.ViewGroup;
-import android.view.View.OnClickListener;
 import android.widget.RelativeLayout;
 
 /**
@@ -15,7 +12,7 @@ public class MenuHandler {
     Activity ctx;
     View mainPanelLayout = null;
     View scrollPanelLayout1, scrollPanelLayout2, scrollPanelLayout3;
-    Button menuEquButton, menuAssButton, menuConButton;
+    PixelTextView menuEquButton, menuAssButton, menuConButton;
     ImageButton menuBackToMainButton,menuBackToMainButton2,menuBackToMainButton3;
 
     MenuHandler (Activity ctx) {
@@ -25,9 +22,9 @@ public class MenuHandler {
         scrollPanelLayout2 = (RelativeLayout)ctx.findViewById(R.id.scrollPanelEquip);
         scrollPanelLayout3 = (RelativeLayout)ctx.findViewById(R.id.scrollPanelConsum);
         //panel layout
-        menuAssButton = (Button) ctx.findViewById(R.id.button);
-        menuEquButton = (Button) ctx.findViewById(R.id.button2);
-        menuConButton = (Button) ctx.findViewById(R.id.button3);
+        menuAssButton = (PixelTextView) ctx.findViewById(R.id.button);
+        menuEquButton = (PixelTextView) ctx.findViewById(R.id.button2);
+        menuConButton = (PixelTextView) ctx.findViewById(R.id.button3);
 
         menuBackToMainButton = (ImageButton) ctx.findViewById(R.id.backToMainButton);
         menuBackToMainButton2 = (ImageButton) ctx.findViewById(R.id.backToMainButton2);

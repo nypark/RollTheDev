@@ -17,7 +17,6 @@
                     android:id="@+id/c1"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:text="버튼3"
                     android:background="@color/background_material_dark"
                     android:textColor="@color/abc_primary_text_material_dark" >
                 <ImageView
@@ -26,7 +25,8 @@
                     android:layout_height="70dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/c_hotsix"/>
                 <com.khu.r3turn.rollthedev.PixelTextView
                     android:id="@+id/c1_title"
                     android:layout_width="wrap_content"
@@ -54,7 +54,6 @@
                 android:id="@+id/c2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="버튼3"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_material_dark" >
                 <ImageView
@@ -63,7 +62,8 @@
                     android:layout_height="70dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/c_redbull"/>
                 <com.khu.r3turn.rollthedev.PixelTextView
                     android:id="@+id/c2_title"
                     android:layout_width="wrap_content"
@@ -90,7 +90,6 @@
                 android:id="@+id/c3"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="버튼3"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_material_dark" >
                 <ImageView
@@ -99,7 +98,8 @@
                     android:layout_height="70dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/c_monster"/>
                 <com.khu.r3turn.rollthedev.PixelTextView
                     android:id="@+id/c3_title"
                     android:layout_width="wrap_content"
@@ -126,7 +126,6 @@
                 android:id="@+id/c4"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="버튼3"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_material_dark" >
                 <ImageView
@@ -135,7 +134,8 @@
                     android:layout_height="70dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/c_nightwork"/>
                 <com.khu.r3turn.rollthedev.PixelTextView
                     android:id="@+id/c4_title"
                     android:layout_width="wrap_content"
@@ -162,7 +162,6 @@
                 android:id="@+id/c5"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="버튼3"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_material_dark" >
                 <ImageView
@@ -171,7 +170,8 @@
                     android:layout_height="70dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/c_overwork"/>
                 <com.khu.r3turn.rollthedev.PixelTextView
                     android:id="@+id/c5_title"
                     android:layout_width="wrap_content"
@@ -198,7 +198,6 @@
                 android:id="@+id/c6"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="버튼3"
                 android:background="@color/background_material_dark"
                 android:textColor="@color/abc_primary_text_material_dark" >
                 <ImageView
@@ -207,7 +206,8 @@
                     android:layout_height="70dp"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/c_zombie"/>
                 <com.khu.r3turn.rollthedev.PixelTextView
                     android:id="@+id/c6_title"
                     android:layout_width="wrap_content"
