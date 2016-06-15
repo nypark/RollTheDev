@@ -10,11 +10,28 @@ public class Developer {
 
     private static int DEVELOPER_IMG_SRC = 0;
 
-    private CodeLineThread codeLineThread = new CodeLineThread();
     private int imgFrame = 1;
     private ImageView devImg = null;
 
-    public int codeLine = 0;
+    private double codeLine = 0;
+    private double linePerOneTenthSeconds = 1.f;
+    private double clickMultiplier = 1.f;
+
+    public double getLinePerOneTenthSeconds() {
+        return linePerOneTenthSeconds;
+    }
+
+    public void setLinePerOneTenthSeconds(double linePerOneTenthSeconds) {
+        this.linePerOneTenthSeconds = linePerOneTenthSeconds;
+    }
+
+    public void setClickMultiplier(double clickMultiplier) {
+        this.clickMultiplier = clickMultiplier;
+    }
+
+    public void setCodeLine(double codeLine) {
+        this.codeLine = codeLine;
+    }
 
     public Developer(ViewGroup vg) {
         devImg = (ImageView) vg.findViewById(R.id.DevImg);
@@ -39,12 +56,18 @@ public class Developer {
     }
 
     public void addCodeLine() {
-        codeLine++;
+        this.codeLine +=this.clickMultiplier;
         changeImgType();
         draw();
     }
-
-    public int getCodeLine() {
-        return codeLine;
+    public void addLpts() {
+       this.codeLine+=this.linePerOneTenthSeconds;
     }
+    public double getCodeLine() {
+        return this.codeLine;
+    }
+    public double getClickMultiplier() {
+        return this.clickMultiplier;
+    }
+
 }

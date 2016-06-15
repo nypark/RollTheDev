@@ -15,6 +15,7 @@ public class PanelButton extends Button {
         super(context, attrs);
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.PanelButton, 0, 0);
         try {
+
         } finally {
             a.recycle();
         }

@@ -7,9 +7,35 @@ public class Assistant {
     int count;
     String name;
     double linePerSecond;
-    public Assistant(String name, double linePerSecond) {
+    double price;
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getLinePerSecond() {
+        return linePerSecond;
+    }
+
+    public void setLinePerSecond(double linePerSecond) {
+        this.linePerSecond = linePerSecond;
+    }
+
+    public Assistant(String name, double linePerSecond, double price) {
         this.count = 0;
         this.name = name;
         this.linePerSecond = linePerSecond;
+        this.price = price;
     }
 }
