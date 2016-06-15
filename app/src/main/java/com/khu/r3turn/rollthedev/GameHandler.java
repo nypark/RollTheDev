@@ -55,7 +55,6 @@ public class GameHandler {
         developer.draw();
     }
     public void init() {
-
         a = new RelativeLayout[6];
         e = new RelativeLayout[6];
         c = new RelativeLayout[6];
@@ -93,26 +92,26 @@ public class GameHandler {
             }
         });
 
-        assistList.add(new Assistant("Newbie",1.2, 100));
-        assistList.add(new Assistant("Intermediate",2.4, 100));
-        assistList.add(new Assistant("Experienced",1.2, 100));
-        assistList.add(new Assistant("Advanced",1.2, 100));
-        assistList.add(new Assistant("Senior",1.2, 100));
-        assistList.add(new Assistant("Expert",1.2, 100));
+        assistList.add(new Assistant("Newbie",5, 100));
+        assistList.add(new Assistant("Intermediate",15, 1000));
+        assistList.add(new Assistant("Experienced",50, 5000));
+        assistList.add(new Assistant("Advanced",100, 10000));
+        assistList.add(new Assistant("Senior",200, 20000));
+        assistList.add(new Assistant("Expert",500, 50000));
 
-        equipList.add(new Equipment("Keyboard", 1 , 1));
-        equipList.add(new Equipment("Keyboard2", 4 , 1));
-        equipList.add(new Equipment("Keyboard3", 10 , 1));
-        equipList.add(new Equipment("Monitor", 1 , 1));
-        equipList.add(new Equipment("Monitor2", 4 , 1));
-        equipList.add(new Equipment("Monitor3", 10 , 1));
+        equipList.add(new Equipment("Keyboard", 5, 1 , 1000));
+        equipList.add(new Equipment("Keyboard2",10, 2  , 50000));
+        equipList.add(new Equipment("Keyboard3",20, 5 , 25000.f));
+        equipList.add(new Equipment("Monitor", 40,10 , 100000));
+        equipList.add(new Equipment("Monitor2",80, 20 , 1000000));
+        equipList.add(new Equipment("Monitor3", 160,40 , 6543210));
 
-        consumList.add(new Consumable("Hot-Six", 2, 1 ));
-        consumList.add(new Consumable("RedBull", 4, 1 ));
-        consumList.add(new Consumable("Monster", 8, 1 ));
-        consumList.add(new Consumable("Nightwork", 2, 2 ));
-        consumList.add(new Consumable("Overwork", 4 , 4 ));
-        consumList.add(new Consumable("Zombie", 8 , 8 ));
+        consumList.add(new Consumable("Hot-Six", 1, 1 ,100000));
+        consumList.add(new Consumable("RedBull", 2, 2 , 200000));
+        consumList.add(new Consumable("Monster", 4, 3 , 500000));
+        consumList.add(new Consumable("Nightwork", 8, 4 ,1000000));
+        consumList.add(new Consumable("Overwork", 16 , 5 ,2000000 ));
+        consumList.add(new Consumable("Zombie", 32 , 10 , 5000000 ));
 
         a[0]=(RelativeLayout)thisActivity.findViewById(R.id.a1);
         a[1]=(RelativeLayout)thisActivity.findViewById(R.id.a2);
@@ -359,12 +358,13 @@ public class GameHandler {
             Assistant temp = assistList.get(i);
             lps+=temp.getCount()*temp.getLinePerSecond();
         }
-        developer.setLinePerOneTenthSeconds(lps);
+
         double lmp = 1;
         for(int i=0; i<equipList.size(); i++) {
             lmp+=equipList.get(i).getLineMultiplier();
+            lps+=equipList.get(i).getLineAdder();
         }
-
+        developer.setLinePerOneTenthSeconds(lps);
         double asm=1;
         for(int i=0; i<consumList.size(); i++) {
             asm +=consumList.get(i).getAssistMultiplier();

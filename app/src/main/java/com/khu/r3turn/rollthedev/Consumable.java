@@ -50,9 +50,10 @@ public class Consumable {
         this.developerMutliplier = developerMutliplier;
     }
 
-    public Consumable(String name, int dm, int am) {
+    public Consumable(String name, int dm, int am , double price) {
         this.name=name;
         this.developerMutliplier = dm;
         this.assistMultiplier=am;
+        this.price = price;
     }
 }

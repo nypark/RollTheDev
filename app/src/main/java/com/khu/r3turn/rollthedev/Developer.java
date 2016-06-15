@@ -14,9 +14,11 @@ public class Developer {
     private ImageView devImg = null;
 
     private double codeLine = 0;
+    private double totalCodeLine= 0;
     private double linePerOneTenthSeconds = 1.f;
     private double clickMultiplier = 1.f;
     private double assistMultiplier =1.f;
+
 
     public double getAssistMultiplier() {
         return assistMultiplier;
@@ -48,29 +50,36 @@ public class Developer {
     }
 
     public void changeImgType () {
-        if(imgFrame == 1) imgFrame = 2;
-        else imgFrame = 1;
+        if(imgFrame == 1)
+            imgFrame = 2;
+        else
+            imgFrame = 1;
         //imgFrame = (imgFrame==1)? 2:1;
     }
 
     public void draw() {
         //frame 1
-        if(imgFrame == 1)
-            DEVELOPER_IMG_SRC = R.drawable.developer1_1;
-        //frame 2
-        else
-            DEVELOPER_IMG_SRC = R.drawable.developer1_2;
+        switch(imgFrame) {
+            case 1:
+                DEVELOPER_IMG_SRC = R.drawable.developer1_1;
+                break;
+            case 2:
+                DEVELOPER_IMG_SRC = R.drawable.developer1_2;
+                break;
+        }
 
         devImg.setImageResource(DEVELOPER_IMG_SRC);
     }
 
     public void addCodeLine() {
         this.codeLine +=this.clickMultiplier;
+        this.totalCodeLine +=this.clickMultiplier;
         changeImgType();
         draw();
     }
     public void addLpts() {
        this.codeLine+=this.linePerOneTenthSeconds;
+        this.totalCodeLine+=this.linePerOneTenthSeconds;
     }
     public double getCodeLine() {
         return this.codeLine;

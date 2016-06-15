@@ -51,9 +51,9 @@ public class Equipment {
         this.lineMultiplier = lineMultiplier;
     }
 
-    public Equipment(String name, double lineAdder, double lineMultiplier) {
+    public Equipment(String name, double lineAdder, double lineMultiplier, double price) {
         this.count = 0;
-
+        this.price = price;
         this.name = name;
         this.lineAdder = lineAdder;
         this.lineMultiplier = lineMultiplier;
