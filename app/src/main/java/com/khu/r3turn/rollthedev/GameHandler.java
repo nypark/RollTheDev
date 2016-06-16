@@ -67,13 +67,13 @@ public class GameHandler {
                 thisActivity.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        codeLineTextView.setText("" + developer.getCodeLine());
-                        codeLineTextView2.setText("" + developer.getLinePerOneTenthSeconds()*10+"lines per second");
+                        codeLineTextView.setText(""+Math.round(developer.getCodeLine()*10d)/10d);
+                        codeLineTextView2.setText(""+Math.round(developer.getLinePerOneTenthSeconds()*10d)/10d+"lines per second");
                         updateDeveloperState();
                     }
                 });
             }
-        },100,100);
+        },100,1000);
 
         //add onClickListener to increase code line number
         devImg.setOnTouchListener(new View.OnTouchListener() {
@@ -86,7 +86,7 @@ public class GameHandler {
                     y = (event.getY() + event.getRawY()) / 2.0f;
                     Log.d("coord", x + ", " + y);
                     developer.addCodeLine();
-                    showFloatingText(TEXT_FLOAT_UP, (int) x, (int) y, "+"+developer.getClickMultiplier());
+                    showFloatingText(TEXT_FLOAT_UP, (int) x, (int) y, "+"+Math.round(developer.getClickMultiplier()*10d)/10d);
 
                 }
                 return false;
@@ -156,6 +156,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
+                    ((PixelTextView)thisActivity.findViewById(R.id.a1_count)).setText(""+t.getCount());
                     Log.d("clistenr",0+"");
                 }
             }
@@ -167,6 +168,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
+                    ((PixelTextView)thisActivity.findViewById(R.id.a2_count)).setText(""+t.getCount());
                     Log.d("clistenr",1+"");
                 }
             }
@@ -178,6 +180,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
+                    ((PixelTextView)thisActivity.findViewById(R.id.a3_count)).setText(""+t.getCount());
                     Log.d("clistenr",2+"");
                 }
             }
@@ -189,6 +192,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
+                    ((PixelTextView)thisActivity.findViewById(R.id.a4_count)).setText(""+t.getCount());
                     Log.d("clistenr",3+"");
                 }
             }
@@ -200,6 +204,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
+                    ((PixelTextView)thisActivity.findViewById(R.id.a5_count)).setText(""+t.getCount());
                     Log.d("clistenr",4+"");
                 }
             }
@@ -211,6 +216,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
+                    ((PixelTextView)thisActivity.findViewById(R.id.a6_count)).setText(""+t.getCount());
                     Log.d("clistenr",5+"");
                 }
             }
@@ -222,6 +228,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
+                    ((PixelTextView)thisActivity.findViewById(R.id.e1_count)).setText(""+t.getCount());
                 }
             }
         });
@@ -232,6 +239,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
+                    ((PixelTextView)thisActivity.findViewById(R.id.e2_count)).setText(""+t.getCount());
                 }
             }
         });
@@ -242,6 +250,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
+                    ((PixelTextView)thisActivity.findViewById(R.id.e3_count)).setText(""+t.getCount());
                 }
             }
         });
@@ -256,15 +265,15 @@ public class GameHandler {
                         developer.setFever(Boolean.TRUE);
                         developer.setFeverMulti(2);
                         Toast.makeText(thisActivity, "FEVER MODE START", Toast.LENGTH_SHORT).show();
+                        ((PixelTextView)thisActivity.findViewById(R.id.c1_count)).setText(""+t.getCount());
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                developer.setFever(Boolean.FALSE);
+                                Toast.makeText(thisActivity, "FEVER MODE END", Toast.LENGTH_SHORT).show();
+                            }
+                        },10000);
                     }
-                } else {
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            developer.setFever(Boolean.FALSE);
-                            Toast.makeText(thisActivity, "FEVER MODE END", Toast.LENGTH_SHORT).show();
-                        }
-                    },10000);
                 }
             }
         });
@@ -272,20 +281,21 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(1);
-                if(developer.getFever()==Boolean.FALSE) {
+                if (developer.getFever() == Boolean.FALSE) {
                     if (developer.getCodeLine() >= t.getPrice()) {
                         developer.setCodeLine(developer.getCodeLine() - t.getPrice());
                         t.setCount(t.getCount() + 1);
                         developer.setFever(Boolean.TRUE);
                         developer.setFeverMulti(3);
+                        ((PixelTextView) thisActivity.findViewById(R.id.c2_count)).setText(""+t.getCount());
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                developer.setFever(Boolean.FALSE);
+                                Toast.makeText(thisActivity, "FEVER MODE END", Toast.LENGTH_SHORT).show();
+                            }
+                        }, 10000);
                     }
-                }else {
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            developer.setFever(Boolean.FALSE);
-                        }
-                    },10000);
                 }
             }
         });
@@ -300,15 +310,15 @@ public class GameHandler {
                         t.setCount(t.getCount() + 1);
                         developer.setFever(Boolean.TRUE);
                         developer.setFeverMulti(5);
+                        ((PixelTextView) thisActivity.findViewById(R.id.c3_count)).setText(""+t.getCount());
+                        timer.schedule(new TimerTask() {
+                            @Override
+                            public void run() {
+                                developer.setFever(Boolean.FALSE);
+                                Toast.makeText(thisActivity, "FEVER MODE END", Toast.LENGTH_SHORT).show();
+                            }
+                        }, 10000);
                     }
-                } else {
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            developer.setFever(Boolean.FALSE);
-
-                        }
-                    },10000);
                 }
             }
         });
@@ -317,10 +327,19 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(3);
+                if (developer.getFever() == Boolean.FALSE) {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                }
+                    ((PixelTextView)thisActivity.findViewById(R.id.c4_count)).setText(""+t.getCount());
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            developer.setFever(Boolean.FALSE);
+                            Toast.makeText(thisActivity, "FEVER MODE END", Toast.LENGTH_SHORT).show();
+                        }
+                    },10000);
+                }}
             }
         });
 
@@ -328,10 +347,19 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(4);
+                if (developer.getFever() == Boolean.FALSE) {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                }
+                    ((PixelTextView)thisActivity.findViewById(R.id.c5_count)).setText(""+t.getCount());
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            developer.setFever(Boolean.FALSE);
+                            Toast.makeText(thisActivity, "FEVER MODE END", Toast.LENGTH_SHORT).show();
+                        }
+                    },10000);
+                }}
             }
         });
 
@@ -339,10 +367,19 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(5);
+                if (developer.getFever() == Boolean.FALSE) {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                }
+                    ((PixelTextView)thisActivity.findViewById(R.id.c6_count)).setText(""+t.getCount());
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            developer.setFever(Boolean.FALSE);
+                            Toast.makeText(thisActivity, "FEVER MODE END", Toast.LENGTH_SHORT).show();
+                        }
+                    },10000);
+                }}
             }
         });
 
@@ -350,6 +387,7 @@ public class GameHandler {
     public void showFloatingText(int floatType, int x, int y, String text) {
         System.gc();
         PixelTextView floatTextView = new PixelTextView(vg.getContext(), null);
+
         floatTextView.setText(text);
         floatTextView.setX(x);
         floatTextView.setY(y);
