@@ -58,10 +58,10 @@ public class Developer {
     }
 
     public void changeImgType () {
-        if (imgFrame%2 == 0)
-            imgFrame -= 1;
+        if (this.imgFrame%2 == 0)
+            this.imgFrame --;
         else
-            imgFrame += 1;
+            this.imgFrame ++;
 
     }
 
@@ -109,10 +109,6 @@ public class Developer {
         devImg.setImageResource(DEVELOPER_IMG_SRC);
     }
 
-    public void changeFeverMode() {
-        feverMode = feverMode? false:true;
-    }
-
     public void addCodeLine() {
         if(this.feverMode) {
             this.codeLine += this.clickMultiplier*this.feverMulti;
@@ -139,6 +135,10 @@ public class Developer {
     }
     public void setFever(Boolean a) {
         this.feverMode=a;
+        if(feverMode)
+            imgFrame += 6;
+        else
+            imgFrame -= 6;
     }
 
     public void levelUp(int level) {
