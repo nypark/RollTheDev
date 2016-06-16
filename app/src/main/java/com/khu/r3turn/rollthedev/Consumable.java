@@ -17,7 +17,6 @@ public class Consumable {
         this.price = price;
     }
 
-
     public int getCount() {
         return count;
     }
