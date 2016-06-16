@@ -16,7 +16,6 @@ public class Equipment {
     }
 
     String name;
-    double lineAdder;
     double lineMultiplier;
 
     public int getCount() {
@@ -35,14 +34,6 @@ public class Equipment {
         this.name = name;
     }
 
-    public double getLineAdder() {
-        return lineAdder;
-    }
-
-    public void setLineAdder(double lineAdder) {
-        this.lineAdder = lineAdder;
-    }
-
     public double getLineMultiplier() {
         return lineMultiplier;
     }
@@ -51,11 +42,10 @@ public class Equipment {
         this.lineMultiplier = lineMultiplier;
     }
 
-    public Equipment(String name, double lineAdder, double lineMultiplier, double price) {
+    public Equipment(String name, double lineMultiplier, double price) {
         this.count = 0;
         this.price = price;
         this.name = name;
-        this.lineAdder = lineAdder;
         this.lineMultiplier = lineMultiplier;
     }
 }

@@ -7,6 +7,7 @@ public class Consumable {
     int count;
     String name;
     double price;
+    int lpsMutliplier;
 
     public double getPrice() {
         return price;
@@ -16,8 +17,7 @@ public class Consumable {
         this.price = price;
     }
 
-    int assistMultiplier;
-    int developerMutliplier;
+
     public int getCount() {
         return count;
     }
@@ -34,27 +34,10 @@ public class Consumable {
         this.name = name;
     }
 
-    public int getAssistMultiplier() {
-        return assistMultiplier;
-    }
-
-    public void setAssistMultiplier(int assistMultiplier) {
-        this.assistMultiplier = assistMultiplier;
-    }
-
-    public int getDeveloperMutliplier() {
-        return developerMutliplier;
-    }
-
-    public void setDeveloperMutliplier(int developerMutliplier) {
-        this.developerMutliplier = developerMutliplier;
-    }
-
-    public Consumable(String name, int dm, int am , double price) {
+    public Consumable(String name, int lm, double price) {
         this.count=0;
+        this.lpsMutliplier=lm;
         this.name=name;
-        this.developerMutliplier = dm;
-        this.assistMultiplier=am;
         this.price = price;
     }
 }

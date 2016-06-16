@@ -28,6 +28,19 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:src="@drawable/a_newbie"/>
+
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/a1_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:text="10Line +0.1lps"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_below="@+id/a1_title"
+                    android:layout_toRightOf="@+id/a1_img"
+                    />
+
                 <com.khu.r3turn.rollthedev.PixelTextView
                     android:id="@+id/a1_title"
                     android:layout_width="wrap_content"
@@ -36,17 +49,6 @@
                     android:textSize="25dp"
                     android:text="NEWBIE"
                     android:textColor="@color/abc_primary_text_material_dark"
-                    android:layout_toRightOf="@+id/a1_img"
-                    />
-                <com.khu.r3turn.rollthedev.PixelTextView
-                    android:id="@+id/a1_desc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:textSize="20dp"
-                    android:text="power good jjang"
-                    android:textColor="@color/abc_primary_text_material_dark"
-                    android:layout_below="@+id/a1_title"
                     android:layout_toRightOf="@+id/a1_img"
                     />
             </RelativeLayout>
@@ -81,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:textSize="20dp"
-                    android:text="power good jjang"
+                    android:text="100line +2lps"
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_below="@+id/a2_title"
                     android:layout_toRightOf="@+id/a2_img"
@@ -118,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:textSize="20dp"
-                    android:text="power good jjang"
+                    android:text="1000line 25lps"
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_below="@+id/a3_title"
                     android:layout_toRightOf="@+id/a3_img"
@@ -155,7 +157,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:textSize="20dp"
-                    android:text="power good jjang"
+                    android:text="10000line 300lps"
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_below="@+id/a4_title"
                     android:layout_toRightOf="@+id/a4_img"
@@ -192,7 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:textSize="20dp"
-                    android:text="power good jjang"
+                    android:text="100000line 3333lps"
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_below="@+id/a5_title"
                     android:layout_toRightOf="@+id/a5_img"
@@ -229,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:textSize="20dp"
-                    android:text="power good jjang"
+                    android:text="1000000line 44444lps"
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_below="@+id/a6_title"
                     android:layout_toRightOf="@+id/a6_img"

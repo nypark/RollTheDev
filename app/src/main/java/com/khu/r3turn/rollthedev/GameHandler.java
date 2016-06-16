@@ -11,6 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -113,26 +114,23 @@ public class GameHandler {
         consumList.add(new Consumable("Overwork", 16 , 5 ,2000000 ));
         consumList.add(new Consumable("Zombie", 32 , 10 , 5000000 ));*/
 
-        assistList.add(new Assistant("Newbie",0.5, 1));
-        assistList.add(new Assistant("Intermediate",1.5, 1));
-        assistList.add(new Assistant("Experienced",5, 1));
-        assistList.add(new Assistant("Advanced",10, 1));
-        assistList.add(new Assistant("Senior",20, 1));
-        assistList.add(new Assistant("Expert",50, 1));
+        assistList.add(new Assistant("Newbie",0.1, 10));
+        assistList.add(new Assistant("Intermediate",2, 100));
+        assistList.add(new Assistant("Experienced",25, 1000));
+        assistList.add(new Assistant("Advanced",300, 10000));
+        assistList.add(new Assistant("Senior",3333, 100000));
+        assistList.add(new Assistant("Expert",44444, 1000000));
 
-        equipList.add(new Equipment("Keyboard", 0.5, 1 , 1));
-        equipList.add(new Equipment("Keyboard2",1.0, 2  , 1));
-        equipList.add(new Equipment("Keyboard3",2.0, 4 , 1));
-        equipList.add(new Equipment("Monitor", 1.0,1.0 , 1));
-        equipList.add(new Equipment("Monitor2",2.0, 2.0 , 1));
-        equipList.add(new Equipment("Monitor3", 4.0,4.0 , 1));
+        equipList.add(new Equipment("Keyboard", 2, 5000));
+        equipList.add(new Equipment("Keyboard2",3, 10000));
+        equipList.add(new Equipment("Keyboard3",5, 30000));
 
-        consumList.add(new Consumable("Hot-Six", 1, 1 ,1));
-        consumList.add(new Consumable("RedBull", 2, 2 , 2));
-        consumList.add(new Consumable("Monster", 16, 16 , 5));
-        consumList.add(new Consumable("Nightwork", 1, 1 ,1));
-        consumList.add(new Consumable("Overwork", 4 , 4 ,2 ));
-        consumList.add(new Consumable("Zombie", 16 , 16 , 5 ));
+        consumList.add(new Consumable("Hot-Six", 2, 10000));
+        consumList.add(new Consumable("RedBull", 3, 30000 ));
+        consumList.add(new Consumable("Monster", 5, 50000));
+        consumList.add(new Consumable("Nightwork", 10, 100000));
+        consumList.add(new Consumable("Overwork", 20 , 200000 ));
+        consumList.add(new Consumable("Zombie", 100 , 1000000 ));
 
         a[0]=(RelativeLayout)thisActivity.findViewById(R.id.a1);
         a[1]=(RelativeLayout)thisActivity.findViewById(R.id.a2);
@@ -150,9 +148,6 @@ public class GameHandler {
         e[0]=(RelativeLayout)thisActivity.findViewById(R.id.e1);
         e[1]=(RelativeLayout)thisActivity.findViewById(R.id.e2);
         e[2]=(RelativeLayout)thisActivity.findViewById(R.id.e3);
-        e[3]=(RelativeLayout)thisActivity.findViewById(R.id.e4);
-        e[4]=(RelativeLayout)thisActivity.findViewById(R.id.e5);
-        e[5]=(RelativeLayout)thisActivity.findViewById(R.id.e6);
 
         a[0].setOnClickListener(new View.OnClickListener(){
             @Override
@@ -250,44 +245,26 @@ public class GameHandler {
                 }
             }
         });
-        e[3].setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View arg0) {
-                Equipment t = equipList.get(3);
-                if(developer.getCodeLine()>=t.getPrice()) {
-                    developer.setCodeLine(developer.getCodeLine()-t.getPrice());
-                    t.setCount(t.getCount()+1);
-                }
-            }
-        });
-        e[4].setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View arg0) {
-                Equipment t = equipList.get(4);
-                if(developer.getCodeLine()>=t.getPrice()) {
-                    developer.setCodeLine(developer.getCodeLine()-t.getPrice());
-                    t.setCount(t.getCount()+1);
-                }
-            }
-        });
-        e[5].setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View arg0) {
-                Equipment t = equipList.get(5);
-                if(developer.getCodeLine()>=t.getPrice()) {
-                    developer.setCodeLine(developer.getCodeLine()-t.getPrice());
-                    t.setCount(t.getCount()+1);
-                }
-            }
-        });
-
         c[0].setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(0);
-                if(developer.getCodeLine()>=t.getPrice()) {
-                    developer.setCodeLine(developer.getCodeLine()-t.getPrice());
-                    t.setCount(t.getCount()+1);
+                if(developer.getFever()==Boolean.FALSE) {
+                    if (developer.getCodeLine() >= t.getPrice()) {
+                        developer.setCodeLine(developer.getCodeLine() - t.getPrice());
+                        t.setCount(t.getCount() + 1);
+                        developer.setFever(Boolean.TRUE);
+                        developer.setFeverMulti(2);
+                        Toast.makeText(thisActivity, "FEVER MODE START", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            developer.setFever(Boolean.FALSE);
+                            Toast.makeText(thisActivity, "FEVER MODE END", Toast.LENGTH_SHORT).show();
+                        }
+                    },10000);
                 }
             }
         });
@@ -295,9 +272,20 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(1);
-                if(developer.getCodeLine()>=t.getPrice()) {
-                    developer.setCodeLine(developer.getCodeLine()-t.getPrice());
-                    t.setCount(t.getCount()+1);
+                if(developer.getFever()==Boolean.FALSE) {
+                    if (developer.getCodeLine() >= t.getPrice()) {
+                        developer.setCodeLine(developer.getCodeLine() - t.getPrice());
+                        t.setCount(t.getCount() + 1);
+                        developer.setFever(Boolean.TRUE);
+                        developer.setFeverMulti(3);
+                    }
+                }else {
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            developer.setFever(Boolean.FALSE);
+                        }
+                    },10000);
                 }
             }
         });
@@ -306,9 +294,21 @@ public class GameHandler {
             @Override
             public void onClick(View arg0) {
                 Consumable t = consumList.get(2);
-                if(developer.getCodeLine()>=t.getPrice()) {
-                    developer.setCodeLine(developer.getCodeLine()-t.getPrice());
-                    t.setCount(t.getCount()+1);
+                if(developer.getFever()==Boolean.FALSE) {
+                    if (developer.getCodeLine() >= t.getPrice()) {
+                        developer.setCodeLine(developer.getCodeLine() - t.getPrice());
+                        t.setCount(t.getCount() + 1);
+                        developer.setFever(Boolean.TRUE);
+                        developer.setFeverMulti(5);
+                    }
+                } else {
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            developer.setFever(Boolean.FALSE);
+
+                        }
+                    },10000);
                 }
             }
         });
@@ -364,36 +364,26 @@ public class GameHandler {
             }
             @Override
             public void onAnimationStart(Animation animation) {
-
             }
             @Override
             public void onAnimationRepeat(Animation animation) {
-
             }
         });
         floatTextView.startAnimation(floatUpAnim);
     }
     public void updateDeveloperState() {
         double lps = 0;
-        for(int i=0; i<assistList.size();i++) {
+        for(int i=0; i<6;i++) {
             Assistant temp = assistList.get(i);
             lps+=temp.getCount()*temp.getLinePerSecond();
         }
-
-        double lmp = 1;
-        for(int i=0; i<equipList.size(); i++) {
-            Equipment temp =  equipList.get(i);
-            lmp+=temp.getCount()*temp.getLineMultiplier();
-            lps+=temp.getCount()*temp.getLineAdder();
+        double lpt = 1;
+        for (int i =0; i<3; i++) {
+            Equipment temp = equipList.get(i);
+            lpt += temp.getLineMultiplier()*temp.getCount();
         }
         developer.setLinePerOneTenthSeconds(lps);
-        double asm=1;
-        for(int i=0; i<consumList.size(); i++) {
-            Consumable temp = consumList.get(i);
-            asm +=temp.getCount()*temp.getAssistMultiplier();
-            lmp +=temp.getCount()*temp.getDeveloperMutliplier();
-        }
-        developer.setClickMultiplier(lmp);
+        developer.setClickMultiplier(lpt);
     }
 
 }

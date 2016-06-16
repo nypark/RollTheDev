@@ -19,22 +19,21 @@ public class Developer {
 
     boolean feverMode = false;
 
+    public int getFeverMulti() {
+        return feverMulti;
+    }
+
+    public void setFeverMulti(int feverMulti) {
+        this.feverMulti = feverMulti;
+    }
+
+    int feverMulti = 1;
     private int devLevel = DEVELOPER_LEVEL_1;
 
-    private double codeLine = 0;
-    private double totalCodeLine= 0;
+    private double codeLine = 11111;
+    private double totalCodeLine= 11111;
     private double linePerOneTenthSeconds = 1.f;
     private double clickMultiplier = 1.f;
-    private double assistMultiplier =1.f;
-
-
-    public double getAssistMultiplier() {
-        return assistMultiplier;
-    }
-
-    public void setAssistMultiplier(double assistMultiplier) {
-        this.assistMultiplier = assistMultiplier;
-    }
 
     public double getLinePerOneTenthSeconds() {
         return linePerOneTenthSeconds;
@@ -59,15 +58,11 @@ public class Developer {
     }
 
     public void changeImgType () {
-        if(!feverMode) {
-            if (imgFrame%2 == 0)
-                imgFrame -= 1;
-            else
-                imgFrame += 1;
-        } else {
+        if (imgFrame%2 == 0)
+            imgFrame -= 1;
+        else
+            imgFrame += 1;
 
-        }
-        //imgFrame = (imgFrame==1)? 2:1;
     }
 
     public void draw() {
@@ -125,13 +120,24 @@ public class Developer {
         draw();
     }
     public void addLpts() {
-        this.codeLine+=this.linePerOneTenthSeconds;
-        this.totalCodeLine+=this.linePerOneTenthSeconds;
+        if(this.feverMode) {
+            this.codeLine += this.linePerOneTenthSeconds * this.feverMulti;
+            this.totalCodeLine += this.linePerOneTenthSeconds * this.feverMulti;
+        }else {
+            this.codeLine += this.linePerOneTenthSeconds;
+            this.totalCodeLine += this.linePerOneTenthSeconds;
+        }
         if(totalCodeLine > 1000.0f) {
             levelUp(DEVELOPER_LEVEL_2);
         } else if(totalCodeLine > 10000.0f) {
             levelUp(DEVELOPER_LEVEL_3);
         }
+    }
+    public boolean getFever(){
+        return this.feverMode;
+    }
+    public void setFever(Boolean a) {
+        this.feverMode=a;
     }
 
     public void levelUp(int level) {
