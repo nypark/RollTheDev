@@ -48,7 +48,17 @@
                         android:layout_below="@+id/e1_title"
                         android:layout_toRightOf="@+id/e1_img"
                         />
-
+                    <com.khu.r3turn.rollthedev.PixelTextView
+                        android:id="@+id/e1_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginRight="15dp"
+                        android:textSize="30dp"
+                        android:text="0"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:layout_alignParentRight="true"
+                        />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/e2"
@@ -85,7 +95,17 @@
                     android:layout_below="@+id/e2_title"
                     android:layout_toRightOf="@+id/e2_img"
                     />
-
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e2_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="30dp"
+                    android:text="0"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_alignParentRight="true"
+                    />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/e3"
@@ -107,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:textSize="25dp"
-                    android:text="Mechanical Keyboard"
+                    android:text="Mechanical KB"
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_toRightOf="@+id/e3_img"
                     />
@@ -122,7 +142,17 @@
                     android:layout_below="@+id/e3_title"
                     android:layout_toRightOf="@+id/e3_img"
                     />
-
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/e3_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="30dp"
+                    android:text="0"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_alignParentRight="true"
+                    />
             </RelativeLayout>
 
         </LinearLayout>

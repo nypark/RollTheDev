@@ -51,6 +51,18 @@
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_toRightOf="@+id/a1_img"
                     />
+
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/a1_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="30dp"
+                    android:text="0"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_alignParentRight="true"
+                    />
             </RelativeLayout>
             <RelativeLayout
                 android:clickable="true"
@@ -87,6 +99,17 @@
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_below="@+id/a2_title"
                     android:layout_toRightOf="@+id/a2_img"
+                    />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/a2_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="30dp"
+                    android:text="0"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_alignParentRight="true"
                     />
             </RelativeLayout>
             <RelativeLayout
@@ -125,6 +148,17 @@
                     android:layout_below="@+id/a3_title"
                     android:layout_toRightOf="@+id/a3_img"
                     />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/a3_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="30dp"
+                    android:text="0"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_alignParentRight="true"
+                    />
             </RelativeLayout>
             <RelativeLayout
                 android:clickable="true"
@@ -161,6 +195,17 @@
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_below="@+id/a4_title"
                     android:layout_toRightOf="@+id/a4_img"
+                    />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/a4_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="30dp"
+                    android:text="0"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_alignParentRight="true"
                     />
             </RelativeLayout>
             <RelativeLayout
@@ -199,6 +244,17 @@
                     android:layout_below="@+id/a5_title"
                     android:layout_toRightOf="@+id/a5_img"
                     />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/a5_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="30dp"
+                    android:text="0"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_alignParentRight="true"
+                    />
             </RelativeLayout>
             <RelativeLayout
                 android:clickable="true"
@@ -235,6 +291,17 @@
                     android:textColor="@color/abc_primary_text_material_dark"
                     android:layout_below="@+id/a6_title"
                     android:layout_toRightOf="@+id/a6_img"
+                    />
+                <com.khu.r3turn.rollthedev.PixelTextView
+                    android:id="@+id/a6_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="30dp"
+                    android:text="0"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    android:layout_alignParentRight="true"
                     />
             </RelativeLayout>
           </LinearLayout>

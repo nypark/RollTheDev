@@ -138,6 +138,10 @@ public class Developer {
     }
     public void setFever(Boolean a) {
         this.feverMode=a;
+        if(feverMode)
+            imgFrame += 6;
+        else
+            imgFrame -= 6;
     }
 
     public void levelUp(int level) {
