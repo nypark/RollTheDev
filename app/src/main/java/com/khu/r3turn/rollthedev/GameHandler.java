@@ -67,13 +67,13 @@ public class GameHandler {
                 thisActivity.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        codeLineTextView.setText("" + developer.getCodeLine());
-                        codeLineTextView2.setText("" + developer.getLinePerOneTenthSeconds()*10+"lines per second");
+                        codeLineTextView.setText(""+Math.round(developer.getCodeLine()*10d)/10d);
+                        codeLineTextView2.setText(""+Math.round(developer.getLinePerOneTenthSeconds()*10d)/10d+"lines per second");
                         updateDeveloperState();
                     }
                 });
             }
-        },100,100);
+        },100,1000);
 
         //add onClickListener to increase code line number
         devImg.setOnTouchListener(new View.OnTouchListener() {
@@ -86,7 +86,7 @@ public class GameHandler {
                     y = (event.getY() + event.getRawY()) / 2.0f;
                     Log.d("coord", x + ", " + y);
                     developer.addCodeLine();
-                    showFloatingText(TEXT_FLOAT_UP, (int) x, (int) y, "+"+developer.getClickMultiplier());
+                    showFloatingText(TEXT_FLOAT_UP, (int) x, (int) y, "+"+Math.round(developer.getClickMultiplier()*10d)/10d);
 
                 }
                 return false;
@@ -350,6 +350,7 @@ public class GameHandler {
     public void showFloatingText(int floatType, int x, int y, String text) {
         System.gc();
         PixelTextView floatTextView = new PixelTextView(vg.getContext(), null);
+
         floatTextView.setText(text);
         floatTextView.setX(x);
         floatTextView.setY(y);

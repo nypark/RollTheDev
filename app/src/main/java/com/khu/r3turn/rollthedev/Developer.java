@@ -114,22 +114,23 @@ public class Developer {
     }
 
     public void addCodeLine() {
-        this.codeLine +=this.clickMultiplier;
-        this.totalCodeLine +=this.clickMultiplier;
+        if(this.feverMode) {
+            this.codeLine += this.clickMultiplier*this.feverMulti;
+            this.totalCodeLine += this.clickMultiplier*this.feverMulti;
+        } else {
+            this.codeLine += this.clickMultiplier;
+            this.totalCodeLine += this.clickMultiplier;
+        }
         changeImgType();
         draw();
     }
     public void addLpts() {
-        if(this.feverMode) {
-            this.codeLine += this.linePerOneTenthSeconds * this.feverMulti;
-            this.totalCodeLine += this.linePerOneTenthSeconds * this.feverMulti;
-        }else {
-            this.codeLine += this.linePerOneTenthSeconds;
-            this.totalCodeLine += this.linePerOneTenthSeconds;
-        }
-        if(totalCodeLine > 1000.0f) {
+        this.codeLine += this.linePerOneTenthSeconds;
+        this.totalCodeLine += this.linePerOneTenthSeconds;
+        if(totalCodeLine > 10000.0f) {
             levelUp(DEVELOPER_LEVEL_2);
-        } else if(totalCodeLine > 10000.0f) {
+        }
+        if(totalCodeLine > 100000.0f) {
             levelUp(DEVELOPER_LEVEL_3);
         }
     }
