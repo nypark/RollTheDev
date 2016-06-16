@@ -58,10 +58,10 @@ public class Developer {
     }
 
     public void changeImgType () {
-        if (imgFrame%2 == 0)
-            imgFrame -= 1;
+        if (this.imgFrame%2 == 0)
+            this.imgFrame --;
         else
-            imgFrame += 1;
+            this.imgFrame ++;
 
     }
 
@@ -109,10 +109,6 @@ public class Developer {
         devImg.setImageResource(DEVELOPER_IMG_SRC);
     }
 
-    public void changeFeverMode() {
-        feverMode = feverMode? false:true;
-    }
-
     public void addCodeLine() {
         this.codeLine +=this.clickMultiplier;
         this.totalCodeLine +=this.clickMultiplier;
@@ -129,7 +125,8 @@ public class Developer {
         }
         if(totalCodeLine > 1000.0f) {
             levelUp(DEVELOPER_LEVEL_2);
-        } else if(totalCodeLine > 10000.0f) {
+        }
+        if(totalCodeLine > 10000.0f) {
             levelUp(DEVELOPER_LEVEL_3);
         }
     }
