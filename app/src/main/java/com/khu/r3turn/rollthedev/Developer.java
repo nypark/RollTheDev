@@ -30,8 +30,8 @@ public class Developer {
     int feverMulti = 1;
     private int devLevel = DEVELOPER_LEVEL_1;
 
-    private double codeLine = 11111;
-    private double totalCodeLine= 11111;
+    private double codeLine = 0.0;
+    private double totalCodeLine= 0.0;
     private double linePerOneTenthSeconds = 1.f;
     private double clickMultiplier = 1.f;
 
@@ -53,6 +53,7 @@ public class Developer {
 
     public Developer(ViewGroup vg) {
         devImg = (ImageView) vg.findViewById(R.id.DevImg);
+        devImg.setImageResource(DEVELOPER_IMG_SRC);
         DEVELOPER_IMG_SRC = R.drawable.developer1_1;
         feverMode = false;
     }
@@ -106,6 +107,9 @@ public class Developer {
                 break;
         }
 
+        /*if(devImg != null) {
+            ((BitmapDrawable)devImg.getDrawable()).getBitmap().recycle();
+        }*/
         devImg.setImageResource(DEVELOPER_IMG_SRC);
     }
 

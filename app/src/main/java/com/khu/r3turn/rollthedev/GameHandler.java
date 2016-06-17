@@ -1,7 +1,6 @@
 package com.khu.r3turn.rollthedev;
 
 import android.app.Activity;
-import android.content.Context;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -73,7 +72,7 @@ public class GameHandler {
                     }
                 });
             }
-        },100,1000);
+        },100,100);
 
         //add onClickListener to increase code line number
         devImg.setOnTouchListener(new View.OnTouchListener() {
@@ -156,7 +155,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.a1_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.a1_count)).setText(Integer.toString(t.getCount()));
                     Log.d("clistenr",0+"");
                 }
             }
@@ -168,7 +167,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.a2_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.a2_count)).setText(Integer.toString(t.getCount()));
                     Log.d("clistenr",1+"");
                 }
             }
@@ -180,7 +179,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.a3_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.a3_count)).setText(Integer.toString(t.getCount()));
                     Log.d("clistenr",2+"");
                 }
             }
@@ -192,7 +191,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.a4_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.a4_count)).setText(Integer.toString(t.getCount()));
                     Log.d("clistenr",3+"");
                 }
             }
@@ -204,7 +203,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.a5_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.a5_count)).setText(Integer.toString(t.getCount()));
                     Log.d("clistenr",4+"");
                 }
             }
@@ -216,7 +215,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.a6_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.a6_count)).setText(Integer.toString(t.getCount()));
                     Log.d("clistenr",5+"");
                 }
             }
@@ -228,7 +227,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.e1_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.e1_count)).setText(Integer.toString(t.getCount()));
                 }
             }
         });
@@ -239,7 +238,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.e2_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.e2_count)).setText(Integer.toString(t.getCount()));
                 }
             }
         });
@@ -250,7 +249,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.e3_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.e3_count)).setText(Integer.toString(t.getCount()));
                 }
             }
         });
@@ -265,7 +264,7 @@ public class GameHandler {
                         developer.setFever(Boolean.TRUE);
                         developer.setFeverMulti(2);
                         Toast.makeText(thisActivity, "FEVER MODE START", Toast.LENGTH_SHORT).show();
-                        ((PixelTextView)thisActivity.findViewById(R.id.c1_count)).setText(""+t.getCount());
+                        ((PixelTextView)thisActivity.findViewById(R.id.c1_count)).setText(Integer.toString(t.getCount()));
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
@@ -287,7 +286,7 @@ public class GameHandler {
                         t.setCount(t.getCount() + 1);
                         developer.setFever(Boolean.TRUE);
                         developer.setFeverMulti(3);
-                        ((PixelTextView) thisActivity.findViewById(R.id.c2_count)).setText(""+t.getCount());
+                        ((PixelTextView) thisActivity.findViewById(R.id.c2_count)).setText(Integer.toString(t.getCount()));
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
@@ -310,7 +309,7 @@ public class GameHandler {
                         t.setCount(t.getCount() + 1);
                         developer.setFever(Boolean.TRUE);
                         developer.setFeverMulti(5);
-                        ((PixelTextView) thisActivity.findViewById(R.id.c3_count)).setText(""+t.getCount());
+                        ((PixelTextView) thisActivity.findViewById(R.id.c3_count)).setText(Integer.toString(t.getCount()));
                         timer.schedule(new TimerTask() {
                             @Override
                             public void run() {
@@ -331,7 +330,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.c4_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.c4_count)).setText(Integer.toString(t.getCount()));
                     timer.schedule(new TimerTask() {
                         @Override
                         public void run() {
@@ -351,7 +350,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.c5_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.c5_count)).setText(Integer.toString(t.getCount()));
                     timer.schedule(new TimerTask() {
                         @Override
                         public void run() {
@@ -371,7 +370,7 @@ public class GameHandler {
                 if(developer.getCodeLine()>=t.getPrice()) {
                     developer.setCodeLine(developer.getCodeLine()-t.getPrice());
                     t.setCount(t.getCount()+1);
-                    ((PixelTextView)thisActivity.findViewById(R.id.c6_count)).setText(""+t.getCount());
+                    ((PixelTextView)thisActivity.findViewById(R.id.c6_count)).setText(Integer.toString(t.getCount()));
                     timer.schedule(new TimerTask() {
                         @Override
                         public void run() {
