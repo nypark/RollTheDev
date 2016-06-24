@@ -11,7 +11,7 @@ JAVA 프로그래밍 프로젝트
 
 ### Team
 - 2013104074 박나연
-- 2014104..? 유영빈
+- 2014104120 유영빈
 
 ### Used Tools
 - *'Android Stuio'* for Developing
